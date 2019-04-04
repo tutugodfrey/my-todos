@@ -11,10 +11,11 @@ type Todo {
   description: String
   completed: Boolean!
   owner: [User]
+  password: String!
 }
 
 type Mutation {
-  createUser(fullname: String!, email: String!): User
+  createUser(fullname: String!, email: String!, password: String!): User
 }
 
 type Query {

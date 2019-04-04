@@ -11,4 +11,5 @@ type Todo {
   description: String
   completed: Boolean! @default(value: false)
   owner: User
+  password: String!
 }

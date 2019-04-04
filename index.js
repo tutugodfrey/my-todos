@@ -15,10 +15,15 @@ const resolvers = {
   Mutation: {
     // mutation goes here
     createUser(parent, args, context) {
-      return context.prisma.createUser({
+      console.log(args.password)
+      if (!args.password) {
+        return 'please provide your password'
+      }
+      const result = context.prisma.createUser({
         fullname: args.fullname,
         email: args.email
       });
+
     }
   },
 }
